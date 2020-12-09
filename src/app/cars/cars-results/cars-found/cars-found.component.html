@@ -1,0 +1,1139 @@
+<div class="container">
+    <div class="booking">
+
+        <div class="book-form">
+
+            
+
+            <form action="" class="form">
+    
+                <div class="form__group">
+                    <input type="text" class="form__input" placeholder="Pick-up Location" id="pickuplocation" required>
+                    <label for="pickuplocation" class="form__label">Pick-up Location</label>
+                </div>
+        
+                <div class="form__group">
+                    <input type="datetime-local" class="form__input" placeholder="Pick-up Date" id="pickupdate" required>
+                    <label for="pickupdate" class="form__label">Pick-up Date</label>
+                </div>
+
+                <div class="form__group">
+                    <input type="datetime-local" class="form__input" placeholder="Drop-off Date" id="dropoffdate" required>
+                    <label for="dropoffdate" class="form__label">Drop-off Date</label>
+                </div>
+
+                <div class="form__btn">
+                    <a routerLink="available">
+                        <button class="btn btn--green bold">
+                            <i class="fas fa-search"></i>
+                            Search
+                        </button>
+                    </a>
+                </div>
+        
+            </form>
+        </div>
+
+    </div>
+
+
+
+    <div class="notice">
+            <h3>Please note that the data's displayed are not correct it was only used for testing</h3>
+    </div>
+
+
+
+
+
+    
+
+    <section class="result u-margin-top-big">
+        <div class="result__row">
+            <div class="result__filter">
+                <div class="result__group">
+                    <!-- <label for="cars" class="result__label">Choose a car:</label> -->
+                    <button class="dropdown" (click)="onDay1()" [class.active]="isDay1">
+                        <a class="dropbtn">
+                            Days
+                        </a>
+                        <ul class="dropdown-content">
+            
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt1" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+            
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt2" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+            
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt3" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt4" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+            
+                        </ul>
+                    </button>
+                    
+                    <div class="result__select-icon">
+                        <i class="fas fa-angle-down"></i>
+                    </div>
+                </div>
+
+                <div class="result__group">
+                    <!-- <label for="cars" class="result__label">Choose a car:</label> -->
+                    <button class="dropdown" (click)="onDay2()" [class.active]="isDay2">
+                        <a class="dropbtn">
+                            Days
+                        </a>
+                        <ul class="dropdown-content">
+            
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt1" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+            
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt2" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+            
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt3" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt4" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+            
+                        </ul>
+                    </button>
+                    
+                    <div class="result__select-icon">
+                        <i class="fas fa-angle-down"></i>
+                    </div>
+                </div>
+
+                <div class="result__group">
+                    <!-- <label for="cars" class="result__label">Choose a car:</label> -->
+                    <button class="dropdown" (click)="onDay3()" [class.active]="isDay3">
+                        <a class="dropbtn">
+                            Days
+                        </a>
+                        <ul class="dropdown-content">
+            
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt1" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+            
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt2" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+            
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt3" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt4" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+            
+                        </ul>
+                    </button>
+                    
+                    <div class="result__select-icon">
+                        <i class="fas fa-angle-down"></i>
+                    </div>
+                </div>
+
+                <div class="result__group">
+                    <!-- <label for="cars" class="result__label">Choose a car:</label> -->
+                    <button class="dropdown" (click)="onDay4()" [class.active]="isDay4">
+                        <a class="dropbtn">
+                            Days
+                        </a>
+                        <ul class="dropdown-content">
+            
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt1" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+            
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt2" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+            
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt3" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt4" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+            
+                        </ul>
+                    </button>
+                    
+                    <div class="result__select-icon">
+                        <i class="fas fa-angle-down"></i>
+                    </div>
+                </div>
+
+                <div class="result__group">
+                    <!-- <label for="cars" class="result__label">Choose a car:</label> -->
+                    <button class="dropdown" (click)="onDay5()" [class.active]="isDay5">
+                        <a class="dropbtn">
+                            Days
+                        </a>
+                        <ul class="dropdown-content">
+            
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt1" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+            
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt2" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+            
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt3" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt4" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+            
+                        </ul>
+                    </button>
+                    
+                    <div class="result__select-icon">
+                        <i class="fas fa-angle-down"></i>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="result__details">
+                <div class="result__detail">
+                    <div class="result__car">
+                        <img src="../../assets/img/nissan altima.jpg" alt="top-story" class="result__car--img">
+                    </div>
+
+                    <div class="result__car-info">
+                        <div class="result__car-info--name">
+                            <h3>Nissan Altima</h3>
+                            <p>or similar</p>
+                        </div>
+                        <div class="result__car-info--properties">
+                            <ul class="list">
+                                <li class="list__item">
+                                    <i class="fas fa-car"></i>
+                                    5 Seats
+                                </li>
+                                <li class="list__item">
+                                    <i class="fas fa-suitcase"></i>
+                                    3 Large bags
+                                </li>
+                                <li class="list__item">
+                                    <i class="fas fa-fan"></i>
+                                    Air Conditioning
+                                </li>
+                                <li class="list__item">
+                                    <i class="fas fa-door-closed"></i>
+                                    4 Doors
+                                </li>
+                                <li class="list__item">
+                                    <i class="fas fa-network-wired"></i>
+                                    Automatic gear
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- <div class="result__car-info--size">full-size</div>
+                        <div class="result__car-info--offer">
+                            special offer
+                        </div> -->
+                    </div>
+
+                    <div class="result__price-total">
+                        <p>Price for 3 days</p>
+                        <div class="result__price">$100</div>
+                    </div>
+
+                    <div class="result__car-supplier">
+                        <div class="result__car-supplier--info">
+                            <div class="result__car-supplier--details">
+                                <div class="result__car-supplier--logo">
+                                    <i class="fas fa-network-wired"></i>
+                                </div>
+                                <div class="result__car-supplier--name">
+                                    <p>Dollar</p>
+                                    <p>Rental terms</p>
+                                </div>
+                            </div>
+                            <div class="result__car-supplier--rating">
+                                <div class="result__car-supplier--rating-num">8.0</div>
+                                <div class="result__car-supplier--rating-text">Excellent</div>
+                            </div>
+                           
+                        </div>
+
+                        <div class="result__car-supplier--packages">
+                            <div class="result__car-supplier--package">
+                                <div class="result__car-supplier--fuel">
+                                    <div class="result__car-supplier--logo">
+                                        <i class="fas fa-gas-pump"></i>
+                                    </div>
+                                    <div class="result__car-supplier--fuel-package">
+                                        <p>Fuel Policy</p>
+                                        <p>Full to Full</p>
+                                    </div>
+                                </div>
+                                <div class="result__car-supplier--mileage">
+                                    <div class="result__car-supplier--logo">
+                                        <i class="fas fa-route"></i>
+                                    </div>
+                                    <div class="result__car-supplier--mileage-package">
+                                        <p>Mileage</p>
+                                        <p>Unlimited</p>
+                                    </div>
+                                </div>
+                                <div class="result__car-supplier--airport">
+                                    <div class="result__car-supplier--logo">
+                                        <i class="fas fa-plane"></i>
+                                    </div>
+                                    <div class="result__car-supplier--airport-package">
+                                        <p>Los Angeles Airport</p>
+                                        <p>Free Shuttle Bus</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="result__car-supplier--price-inc">
+                                <p>Included in the price</p>
+                                <ul>
+                                    <li><i class="fas fa-check"></i>Amendments</li>
+                                    <li><i class="fas fa-check"></i>Theft Protection</li>
+                                    <li><i class="fas fa-check"></i>Collision Damage Waiver</li>
+                                </ul>
+                            </div>
+                           
+                        </div>
+
+                        <div class="result__car-supplier--view">
+                            <div class="result__car-supplier--deal">
+                                <button class="btn btn--green bold">View Deal</button>
+                            </div>
+                            <div class="result__car-supplier--save">
+                                <button class="btn">save later</button>
+                            </div>
+                           
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="result__detail">
+                    <div class="result__car">
+                        <img src="../../assets/img/nissan altima.jpg" alt="top-story" class="result__car--img">
+                    </div>
+
+                    <div class="result__car-info">
+                        <div class="result__car-info--name">
+                            <h3>Nissan Altima</h3>
+                            <p>or similar</p>
+                        </div>
+                        <div class="result__car-info--properties">
+                            <ul class="list">
+                                <li class="list__item">
+                                    <i class="fas fa-car"></i>
+                                    5 Seats
+                                </li>
+                                <li class="list__item">
+                                    <i class="fas fa-suitcase"></i>
+                                    3 Large bags
+                                </li>
+                                <li class="list__item">
+                                    <i class="fas fa-fan"></i>
+                                    Air Conditioning
+                                </li>
+                                <li class="list__item">
+                                    <i class="fas fa-door-closed"></i>
+                                    4 Doors
+                                </li>
+                                <li class="list__item">
+                                    <i class="fas fa-network-wired"></i>
+                                    Automatic gear
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- <div class="result__car-info--size">full-size</div>
+                        <div class="result__car-info--offer">
+                            special offer
+                        </div> -->
+                    </div>
+
+                    <div class="result__price-total">
+                        <p>Price for 3 days</p>
+                        <div class="result__price">$100</div>
+                    </div>
+
+                    <div class="result__car-supplier">
+                        <div class="result__car-supplier--info">
+                            <div class="result__car-supplier--details">
+                                <div class="result__car-supplier--logo">
+                                    <i class="fas fa-network-wired"></i>
+                                </div>
+                                <div class="result__car-supplier--name">
+                                    <p>Dollar</p>
+                                    <p>Rental terms</p>
+                                </div>
+                            </div>
+                            <div class="result__car-supplier--rating">
+                                <div class="result__car-supplier--rating-num">8.0</div>
+                                <div class="result__car-supplier--rating-text">Excellent</div>
+                            </div>
+                           
+                        </div>
+
+                        <div class="result__car-supplier--packages">
+                            <div class="result__car-supplier--package">
+                                <div class="result__car-supplier--fuel">
+                                    <div class="result__car-supplier--logo">
+                                        <i class="fas fa-gas-pump"></i>
+                                    </div>
+                                    <div class="result__car-supplier--fuel-package">
+                                        <p>Fuel Policy</p>
+                                        <p>Full to Full</p>
+                                    </div>
+                                </div>
+                                <div class="result__car-supplier--mileage">
+                                    <div class="result__car-supplier--logo">
+                                        <i class="fas fa-route"></i>
+                                    </div>
+                                    <div class="result__car-supplier--mileage-package">
+                                        <p>Mileage</p>
+                                        <p>Unlimited</p>
+                                    </div>
+                                </div>
+                                <div class="result__car-supplier--airport">
+                                    <div class="result__car-supplier--logo">
+                                        <i class="fas fa-plane"></i>
+                                    </div>
+                                    <div class="result__car-supplier--airport-package">
+                                        <p>Los Angeles Airport</p>
+                                        <p>Free Shuttle Bus</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="result__car-supplier--price-inc">
+                                <p>Included in the price</p>
+                                <ul>
+                                    <li><i class="fas fa-check"></i>Amendments</li>
+                                    <li><i class="fas fa-check"></i>Theft Protection</li>
+                                    <li><i class="fas fa-check"></i>Collision Damage Waiver</li>
+                                </ul>
+                            </div>
+                           
+                        </div>
+
+                        <div class="result__car-supplier--view">
+                            <div class="result__car-supplier--deal">
+                                <button class="btn btn--green bold">View Deal</button>
+                            </div>
+                            <div class="result__car-supplier--save">
+                                <button class="btn">save later</button>
+                            </div>
+                           
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="result__detail">
+                    <div class="result__car">
+                        <img src="../../assets/img/nissan altima.jpg" alt="top-story" class="result__car--img">
+                    </div>
+
+                    <div class="result__car-info">
+                        <div class="result__car-info--name">
+                            <h3>Nissan Altima</h3>
+                            <p>or similar</p>
+                        </div>
+                        <div class="result__car-info--properties">
+                            <ul class="list">
+                                <li class="list__item">
+                                    <i class="fas fa-car"></i>
+                                    5 Seats
+                                </li>
+                                <li class="list__item">
+                                    <i class="fas fa-suitcase"></i>
+                                    3 Large bags
+                                </li>
+                                <li class="list__item">
+                                    <i class="fas fa-fan"></i>
+                                    Air Conditioning
+                                </li>
+                                <li class="list__item">
+                                    <i class="fas fa-door-closed"></i>
+                                    4 Doors
+                                </li>
+                                <li class="list__item">
+                                    <i class="fas fa-network-wired"></i>
+                                    Automatic gear
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- <div class="result__car-info--size">full-size</div>
+                        <div class="result__car-info--offer">
+                            special offer
+                        </div> -->
+                    </div>
+
+                    <div class="result__price-total">
+                        <p>Price for 3 days</p>
+                        <div class="result__price">$100</div>
+                    </div>
+
+                    <div class="result__car-supplier">
+                        <div class="result__car-supplier--info">
+                            <div class="result__car-supplier--details">
+                                <div class="result__car-supplier--logo">
+                                    <i class="fas fa-network-wired"></i>
+                                </div>
+                                <div class="result__car-supplier--name">
+                                    <p>Dollar</p>
+                                    <p>Rental terms</p>
+                                </div>
+                            </div>
+                            <div class="result__car-supplier--rating">
+                                <div class="result__car-supplier--rating-num">8.0</div>
+                                <div class="result__car-supplier--rating-text">Excellent</div>
+                            </div>
+                           
+                        </div>
+
+                        <div class="result__car-supplier--packages">
+                            <div class="result__car-supplier--package">
+                                <div class="result__car-supplier--fuel">
+                                    <div class="result__car-supplier--logo">
+                                        <i class="fas fa-gas-pump"></i>
+                                    </div>
+                                    <div class="result__car-supplier--fuel-package">
+                                        <p>Fuel Policy</p>
+                                        <p>Full to Full</p>
+                                    </div>
+                                </div>
+                                <div class="result__car-supplier--mileage">
+                                    <div class="result__car-supplier--logo">
+                                        <i class="fas fa-route"></i>
+                                    </div>
+                                    <div class="result__car-supplier--mileage-package">
+                                        <p>Mileage</p>
+                                        <p>Unlimited</p>
+                                    </div>
+                                </div>
+                                <div class="result__car-supplier--airport">
+                                    <div class="result__car-supplier--logo">
+                                        <i class="fas fa-plane"></i>
+                                    </div>
+                                    <div class="result__car-supplier--airport-package">
+                                        <p>Los Angeles Airport</p>
+                                        <p>Free Shuttle Bus</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="result__car-supplier--price-inc">
+                                <p>Included in the price</p>
+                                <ul>
+                                    <li><i class="fas fa-check"></i>Amendments</li>
+                                    <li><i class="fas fa-check"></i>Theft Protection</li>
+                                    <li><i class="fas fa-check"></i>Collision Damage Waiver</li>
+                                </ul>
+                            </div>
+                           
+                        </div>
+
+                        <div class="result__car-supplier--view">
+                            <div class="result__car-supplier--deal">
+                                <button class="btn btn--green bold">View Deal</button>
+                            </div>
+                            <div class="result__car-supplier--save">
+                                <button class="btn">save later</button>
+                            </div>
+                           
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="result__detail">
+                    <div class="result__car">
+                        <img src="../../assets/img/nissan altima.jpg" alt="top-story" class="result__car--img">
+                    </div>
+
+                    <div class="result__car-info">
+                        <div class="result__car-info--name">
+                            <h3>Nissan Altima</h3>
+                            <p>or similar</p>
+                        </div>
+                        <div class="result__car-info--properties">
+                            <ul class="list">
+                                <li class="list__item">
+                                    <i class="fas fa-car"></i>
+                                    5 Seats
+                                </li>
+                                <li class="list__item">
+                                    <i class="fas fa-suitcase"></i>
+                                    3 Large bags
+                                </li>
+                                <li class="list__item">
+                                    <i class="fas fa-fan"></i>
+                                    Air Conditioning
+                                </li>
+                                <li class="list__item">
+                                    <i class="fas fa-door-closed"></i>
+                                    4 Doors
+                                </li>
+                                <li class="list__item">
+                                    <i class="fas fa-network-wired"></i>
+                                    Automatic gear
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- <div class="result__car-info--size">full-size</div>
+                        <div class="result__car-info--offer">
+                            special offer
+                        </div> -->
+                    </div>
+
+                    <div class="result__price-total">
+                        <p>Price for 3 days</p>
+                        <div class="result__price">$100</div>
+                    </div>
+
+                    <div class="result__car-supplier">
+                        <div class="result__car-supplier--info">
+                            <div class="result__car-supplier--details">
+                                <div class="result__car-supplier--logo">
+                                    <i class="fas fa-network-wired"></i>
+                                </div>
+                                <div class="result__car-supplier--name">
+                                    <p>Dollar</p>
+                                    <p>Rental terms</p>
+                                </div>
+                            </div>
+                            <div class="result__car-supplier--rating">
+                                <div class="result__car-supplier--rating-num">8.0</div>
+                                <div class="result__car-supplier--rating-text">Excellent</div>
+                            </div>
+                           
+                        </div>
+
+                        <div class="result__car-supplier--packages">
+                            <div class="result__car-supplier--package">
+                                <div class="result__car-supplier--fuel">
+                                    <div class="result__car-supplier--logo">
+                                        <i class="fas fa-gas-pump"></i>
+                                    </div>
+                                    <div class="result__car-supplier--fuel-package">
+                                        <p>Fuel Policy</p>
+                                        <p>Full to Full</p>
+                                    </div>
+                                </div>
+                                <div class="result__car-supplier--mileage">
+                                    <div class="result__car-supplier--logo">
+                                        <i class="fas fa-route"></i>
+                                    </div>
+                                    <div class="result__car-supplier--mileage-package">
+                                        <p>Mileage</p>
+                                        <p>Unlimited</p>
+                                    </div>
+                                </div>
+                                <div class="result__car-supplier--airport">
+                                    <div class="result__car-supplier--logo">
+                                        <i class="fas fa-plane"></i>
+                                    </div>
+                                    <div class="result__car-supplier--airport-package">
+                                        <p>Los Angeles Airport</p>
+                                        <p>Free Shuttle Bus</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="result__car-supplier--price-inc">
+                                <p>Included in the price</p>
+                                <ul>
+                                    <li><i class="fas fa-check"></i>Amendments</li>
+                                    <li><i class="fas fa-check"></i>Theft Protection</li>
+                                    <li><i class="fas fa-check"></i>Collision Damage Waiver</li>
+                                </ul>
+                            </div>
+                           
+                        </div>
+
+                        <div class="result__car-supplier--view">
+                            <div class="result__car-supplier--deal">
+                                <button class="btn btn--green bold">View Deal</button>
+                            </div>
+                            <div class="result__car-supplier--save">
+                                <button class="btn">save later</button>
+                            </div>
+                           
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <section class="hotels">
+        <div class="hotels__head">
+            <h2 class="hotels__top">Top Hotels</h2>
+            <a href="#" class="hotels__see-all">see all</a>
+        </div>
+        <div class="top-hotels">
+            <div class="top-hotel">
+                <img src="../../assets/img/backgimg2.jpg" alt="House 1" class="top-hotel__img">
+                <div class="top-hotel__like fas fa-angle-down"></div>
+                <h5 class="top-hotel__name top-hotel__name--top">Beautiful Familiy House</h5>
+                <h5 class="top-hotel__name top-hotel__name--bottom">Beautiful Familiy House</h5>
+                <div class="top-hotel__location">
+                    <i class="fas fa-angle-down"></i>
+                    <p>USA</p>
+                </div>
+                <div class="top-hotel__rooms">
+                    <i class="fas fa-angle-down"></i>
+                    <p>5 rooms</p>
+                </div>
+                <div class="top-hotel__area">
+                    <i class="fas fa-angle-down"></i>
+                    <p>325 m<sup>2</sup></p>
+                </div>
+                <div class="top-hotel__price">
+                    <i class="fas fa-angle-down"></i>
+                    <p>$1,200,000</p>
+                </div>
+                <button class="btn btn--green top-hotel__btn u-margin-bottom-small">Contact realtor</button>
+            </div>
+    
+            <div class="top-hotel">
+                <img src="../../assets/img/backgimg2.jpg" alt="House 1" class="top-hotel__img">
+                <i class="top-hotel__like fas fa-angle-down"></i>
+                <h5 class="top-hotel__name top-hotel__name--top">Beautiful Familiy House</h5>
+                <h5 class="top-hotel__name top-hotel__name--bottom">Beautiful Familiy House</h5>
+                <div class="top-hotel__location">
+                    <i class="fas fa-angle-down"></i>
+                    <p>USA</p>
+                </div>
+                <div class="top-hotel__rooms">
+                    <i class="fas fa-angle-down"></i>
+                    <p>5 rooms</p>
+                </div>
+                <div class="top-hotel__area">
+                    <i class="fas fa-angle-down"></i>
+                    <p>325 m<sup>2</sup></p>
+                </div>
+                <div class="top-hotel__price">
+                    <i class="fas fa-angle-down"></i>
+                    <p>$1,200,000</p>
+                </div>
+                <button class="btn btn--green top-hotel__btn u-margin-bottom-small">Contact realtor</button>
+            </div>
+            <div class="top-hotel">
+                <img src="../../assets/img/backgimg2.jpg" alt="House 1" class="top-hotel__img">
+                <i class="top-hotel__like fas fa-angle-down"></i>
+                <h5 class="top-hotel__name top-hotel__name--top">Beautiful Familiy House</h5>
+                <h5 class="top-hotel__name top-hotel__name--bottom">Beautiful Familiy House</h5>
+                <div class="top-hotel__location">
+                    <i class="fas fa-angle-down"></i>
+                    <p>USA</p>
+                </div>
+                <div class="top-hotel__rooms">
+                    <i class="fas fa-angle-down"></i>
+                    <p>5 rooms</p>
+                </div>
+                <div class="top-hotel__area">
+                    <i class="fas fa-angle-down"></i>
+                    <p>325 m<sup>2</sup></p>
+                </div>
+                <div class="top-hotel__price">
+                    <i class="fas fa-angle-down"></i>
+                    <p>$1,200,000</p>
+                </div>
+                <button class="btn btn--green top-hotel__btn u-margin-bottom-small">Contact realtor</button>
+            </div>
+            <div class="top-hotel">
+                <img src="../../assets/img/backgimg2.jpg" alt="House 1" class="top-hotel__img">
+                <i class="top-hotel__like fas fa-angle-down"></i>
+                <h5 class="top-hotel__name top-hotel__name--top">Beautiful Familiy House</h5>
+                <h5 class="top-hotel__name top-hotel__name--bottom">Beautiful Familiy House</h5>
+                <div class="top-hotel__location">
+                    <i class="fas fa-angle-down"></i>
+                    <p>USA</p>
+                </div>
+                <div class="top-hotel__rooms">
+                    <i class="fas fa-angle-down"></i>
+                    <p>5 rooms</p>
+                </div>
+                <div class="top-hotel__area">
+                    <i class="fas fa-angle-down"></i>
+                    <p>325 m<sup>2</sup></p>
+                </div>
+                <div class="top-hotel__price">
+                    <i class="fas fa-angle-down"></i>
+                    <p>$1,200,000</p>
+                </div>
+                <button class="btn btn--green top-hotel__btn u-margin-bottom-small">Contact realtor</button>
+            </div>
+    
+            <div class="top-hotel">
+                <img src="../../assets/img/backgimg2.jpg" alt="House 1" class="top-hotel__img">
+                <i class="top-hotel__like fas fa-angle-down"></i>
+                <h5 class="top-hotel__name top-hotel__name--top">Beautiful Familiy House</h5>
+                <h5 class="top-hotel__name top-hotel__name--bottom">Beautiful Familiy House</h5>
+                <div class="top-hotel__location">
+                    <i class="fas fa-angle-down"></i>
+                    <p>USA</p>
+                </div>
+                <div class="top-hotel__rooms">
+                    <i class="fas fa-angle-down"></i>
+                    <p>5 rooms</p>
+                </div>
+                <div class="top-hotel__area">
+                    <i class="fas fa-angle-down"></i>
+                    <p>325 m<sup>2</sup></p>
+                </div>
+                <div class="top-hotel__price">
+                    <i class="fas fa-angle-down"></i>
+                    <p>$1,200,000</p>
+                </div>
+                <button class="btn btn--green top-hotel__btn u-margin-bottom-small">Contact realtor</button>
+            </div>
+    
+            <div class="top-hotel">
+                <img src="../../assets/img/backgimg2.jpg" alt="House 1" class="top-hotel__img">
+                <i class="top-hotel__like fas fa-angle-down"></i>
+                <h5 class="top-hotel__name top-hotel__name--top">Beautiful Familiy House</h5>
+                <h5 class="top-hotel__name top-hotel__name--bottom">Beautiful Familiy House</h5>
+                <div class="top-hotel__location">
+                    <i class="fas fa-angle-down"></i>
+                    <p>USA</p>
+                </div>
+                <div class="top-hotel__rooms">
+                    <i class="fas fa-angle-down"></i>
+                    <p>5 rooms</p>
+                </div>
+                <div class="top-hotel__area">
+                    <i class="fas fa-angle-down"></i>
+                    <p>325 m<sup>2</sup></p>
+                </div>
+                <div class="top-hotel__price">
+                    <i class="fas fa-angle-down"></i>
+                    <p>$1,200,000</p>
+                </div>
+                <button class="btn btn--green top-hotel__btn u-margin-bottom-small">Contact realtor</button>
+            </div>
+    
+            <div class="top-hotel">
+                <img src="../../assets/img/backgimg2.jpg" alt="House 1" class="top-hotel__img">
+                <i class="top-hotel__like fas fa-angle-down"></i>
+                <h5 class="top-hotel__name top-hotel__name--top">Beautiful Familiy House</h5>
+                <h5 class="top-hotel__name top-hotel__name--bottom">Beautiful Familiy House</h5>
+                <div class="top-hotel__location">
+                    <i class="fas fa-angle-down"></i>
+                    <p>USA</p>
+                </div>
+                <div class="top-hotel__rooms">
+                    <i class="fas fa-angle-down"></i>
+                    <p>5 rooms</p>
+                </div>
+                <div class="top-hotel__area">
+                    <i class="fas fa-angle-down"></i>
+                    <p>325 m<sup>2</sup></p>
+                </div>
+                <div class="top-hotel__price">
+                    <i class="fas fa-angle-down"></i>
+                    <p>$1,200,000</p>
+                </div>
+                <button class="btn btn--green top-hotel__btn u-margin-bottom-small">Contact realtor</button>
+            </div>
+    
+            <div class="top-hotel">
+                <img src="../../assets/img/backgimg2.jpg" alt="House 1" class="top-hotel__img">
+                <i class="top-hotel__like fas fa-angle-down"></i>
+                <h5 class="top-hotel__name top-hotel__name--top">Beautiful Familiy House</h5>
+                <h5 class="top-hotel__name top-hotel__name--bottom">Beautiful Familiy House</h5>
+                <div class="top-hotel__location">
+                    <i class="fas fa-angle-down"></i>
+                    <p>USA</p>
+                </div>
+                <div class="top-hotel__rooms">
+                    <i class="fas fa-angle-down"></i>
+                    <p>5 rooms</p>
+                </div>
+                <div class="top-hotel__area">
+                    <i class="fas fa-angle-down"></i>
+                    <p>325 m<sup>2</sup></p>
+                </div>
+                <div class="top-hotel__price">
+                    <i class="fas fa-angle-down"></i>
+                    <p>$1,200,000</p>
+                </div>
+                <button class="btn btn--green top-hotel__btn u-margin-bottom-small">Contact realtor</button>
+            </div>
+        </div>
+        
+    </section>
+
+    <section class="stories u-margin-top-big">
+        <div class="stories__head">
+            <h2 class="stories__top">Top Stories</h2>
+            <a href="#" class="stories__see-all">see all</a>    
+        </div>
+        
+        <div class="top-stories">
+            <div class="top-story">
+                <img src="../../assets/img/nissan altima.jpg" alt="top-story" class="top-story__img">
+                <h2 class="top-story__name">Top Story</h2>
+            </div>
+        
+            <div class="top-story">
+                <img src="../../assets/img/nissan altima.jpg" alt="top-story" class="top-story__img">
+                <h2 class="top-story__name">Top Story</h2>
+            </div>
+        
+        
+            <div class="top-story">
+                <img src="../../assets/img/nissan altima.jpg" alt="top-story" class="top-story__img">
+                <h2 class="top-story__name">Top Story</h2>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <section class="destinations u-margin-top-big">
+        <div class="destinations__head">
+            <h2 class="destinations__top">Top Destination</h2>
+            <a href="#" class="destinations__see-all">see all</a>    
+        </div>
+            
+        <div class="top-destinations">
+            <div class="top-destination">
+                <img src="../../assets/img/nissan altima.jpg" alt="top-destination" class="top-destination__img">
+                <h2 class="top-destination__name">Top Destination</h2>
+                <p class="top-destination__desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus deleniti, quasi quis minus adipisci quas blanditiis consectetur porro.
+                </p>
+            </div>
+        
+        
+            <div class="top-destination">
+                <img src="../../assets/img/nissan altima.jpg" alt="top-destination" class="top-destination__img">
+                <h2 class="top-destination__name">Top Destination</h2>
+                <p class="top-destination__desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus deleniti, quasi quis minus adipisci quas blanditiis consectetur porro.
+                </p>
+            </div>
+    
+    
+            <div class="top-destination">
+                <img src="../../assets/img/nissan altima.jpg" alt="top-destination" class="top-destination__img">
+                <h2 class="top-destination__name">Top Destination</h2>
+                <p class="top-destination__desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus deleniti, quasi quis minus adipisci quas blanditiis consectetur porro.
+                </p>
+            </div>
+        </div>
+                
+    </section> -->
+
+        
+</div>
+
+

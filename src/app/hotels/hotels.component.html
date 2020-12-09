@@ -1,0 +1,106 @@
+<div class="container">
+    <div class="booking">
+
+        <div class="book-form">
+
+            <div class="form__filter">
+
+                <div class="form__group">
+                    <!-- <label for="cars" class="form__label">Choose a car:</label> -->
+                    <select id="passenger" name="passenger" class="form__select" [(ngModel)]="passengersvalue">
+                        <option value="adult" class="form__option">Adult</option>
+                        <option value="students" class="form__option">Students</option>
+                        <option value="youths" class="form__option">Youths</option>
+                        <option value="children" class="form__option">Children</option>
+                    </select>
+                    <div class="form__select-icon">
+                        <i class="fas fa-angle-down"></i>
+                    </div>                       
+                </div>
+                
+            </div>
+
+            <form action="" class="form">
+    
+                <div class="form__group">
+                    <input type="text" class="form__input" placeholder="From" id="from" required>
+                    <label for="from" class="form__label">From</label>
+                </div>
+        
+                <div class="form__group">
+                    <input type="datetime-local" class="form__input" placeholder="Check-in" id="check-in" required>
+                    <label for="check-in" class="form__label">Check-in</label>
+                </div>
+
+                <div class="form__group">
+                    <input type="datetime-local" class="form__input" placeholder="Check-out" id="check-out" required>
+                    <label for="check-out" class="form__label">Check-out</label>
+                </div>
+
+                <div class="form__btn">
+                    <a routerLink="available">
+                        <button class="btn btn--green bold">
+                            <i class="fas fa-search"></i>
+                            Search
+                        </button>
+                    </a>
+                </div>
+        
+            </form>
+        </div>
+
+
+
+    </div>
+
+
+    <section class="stories u-margin-top-big">
+        <div class="stories__head">
+            <h2 class="stories__top">Top Stories</h2>
+            <a href="#" class="stories__see-all">see all</a>    
+        </div>
+        
+        <div class="top-stories">
+            <div class="top-story">
+                <img src="../../assets/img/backgimg3.jpg" alt="top-story" class="top-story__img">
+                <h2 class="top-story__name">Top Story</h2>
+            </div>
+        
+            <div class="top-story">
+                <img src="../../assets/img/backgimg3.jpg" alt="top-story" class="top-story__img">
+                <h2 class="top-story__name">Top Story</h2>
+            </div>
+        
+        
+            <div class="top-story">
+                <img src="../../assets/img/backgimg3.jpg" alt="top-story" class="top-story__img">
+                <h2 class="top-story__name">Top Story</h2>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <section class="gallery">
+        <figure class="gallery__item gallery__item--1"><img src="../../assets/img/backgimg3.jpg" alt="top-story" class="gallery__img"></figure>
+        <figure class="gallery__item gallery__item--2"><img src="../../assets/img/backgimg3.jpg" alt="top-story" class="gallery__img"></figure>
+        <figure class="gallery__item gallery__item--3"><img src="../../assets/img/backgimg3.jpg" alt="top-story" class="gallery__img"></figure>
+        <figure class="gallery__item gallery__item--4"><img src="../../assets/img/backgimg3.jpg" alt="top-story" class="gallery__img"></figure>
+        <figure class="gallery__item gallery__item--5"><img src="../../assets/img/backgimg3.jpg" alt="top-story" class="gallery__img"></figure>
+        <figure class="gallery__item gallery__item--6"><img src="../../assets/img/backgimg3.jpg" alt="top-story" class="gallery__img"></figure>
+        <figure class="gallery__item gallery__item--7"><img src="../../assets/img/backgimg3.jpg" alt="top-story" class="gallery__img"></figure>
+        <figure class="gallery__item gallery__item--8"><img src="../../assets/img/backgimg3.jpg" alt="top-story" class="gallery__img"></figure>
+        <figure class="gallery__item gallery__item--9"><img src="../../assets/img/backgimg3.jpg" alt="top-story" class="gallery__img"></figure>
+        <figure class="gallery__item gallery__item--10"><img src="../../assets/img/backgimg3.jpg" alt="top-story" class="gallery__img"></figure>
+        <figure class="gallery__item gallery__item--11"><img src="../../assets/img/backgimg3.jpg" alt="top-story" class="gallery__img"></figure>
+        <figure class="gallery__item gallery__item--12"><img src="../../assets/img/backgimg3.jpg" alt="top-story" class="gallery__img"></figure>
+        <figure class="gallery__item gallery__item--13"><img src="../../assets/img/backgimg3.jpg" alt="top-story" class="gallery__img"></figure>
+        <figure class="gallery__item gallery__item--14"><img src="../../assets/img/backgimg3.jpg" alt="top-story" class="gallery__img"></figure>
+
+
+    </section>
+
+        
+</div>
+
+

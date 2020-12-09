@@ -1,0 +1,66 @@
+<nav class="navbar">
+	<div class="navbar__container">
+		<div class="navbar__logo">
+			<a href="#" class="navbar__logo--link">
+				<img src="../../assets/img/easylifegreenblue-1.png" alt="easylife">
+			</a>
+		</div>
+		
+		<ul class="navbar__list">
+			<a class="navbar__link" routerLink="hotels">
+				<li class="navbar__items">
+					Hotels
+				</li>
+			</a>
+			<a class="navbar__link" routerLink="cars">
+				<li class="navbar__items">
+					Cars
+				</li>
+			</a>
+			<a class="navbar__link" routerLink="">
+				<li class="navbar__items">
+					Flights
+				</li>
+			</a>
+			<a class="navbar__link" routerLink="events">
+				<li class="navbar__items">
+					Events
+				</li>
+			</a>
+		</ul>
+
+		<div class="navbar__signup">
+			<button class="navbar__signup--btn">Sign Up</button>
+		</div>
+		
+	</div>
+	
+</nav>
+
+<div class="nav-toggle">
+	<input type="checkbox" class="nav-toggle__checkbox" id="navi-toggle">
+
+	<label for="navi-toggle" class="nav-toggle__button" (click)="onClick()" [class.active]="active">
+		<span class="nav-toggle__icon">&nbsp;</span>
+	</label>
+
+	<div class="nav-toggle__background"></div>
+
+	<div class="nav-toggle__nav">
+		<ul class="nav-toggle__list">
+			<li class="nav-toggle__items" (click)="onClick()" [class.active]="active">
+				<a class="nav-toggle__link" routerLink="hotels">Hotels</a>
+			</li>
+			<li class="nav-toggle__items" (click)="onClick()" [class.active]="active">
+				<a class="nav-toggle__link" routerLink="cars">Cars</a>
+			</li>
+			<li class="nav-toggle__items" (click)="onClick()" [class.active]="active">
+				<a class="nav-toggle__link" routerLink="">Flights</a>
+			</li>
+			<li class="nav-toggle__items" (click)="onClick()" [class.active]="active">
+				<a class="nav-toggle__link" routerLink="events">Events</a>
+			</li>
+		</ul>
+	</div>
+	<!-- <button class="nav-btn"></button> -->
+</div>

@@ -1,0 +1,1240 @@
+<div class="container">
+    <div class="booking">
+
+        <div class="book-form">
+
+            <div class="form__filter">
+                <div class="form__group">
+                    <!-- <label for="cars" class="form__label">Choose a car:</label> -->
+                    <select id="travel" name="travel" class="form__select" [(ngModel)]="travelvalue" [formControl]="selectedTravel">
+                        <option value="return" class="form__option" >Return</option>
+                        <option value="oneway" class="form__option">One-Way</option>
+                        <option value="multicity" class="form__option">Multi-City</option>
+                    </select>
+                    <div class="form__select-icon">
+                        <i class="fas fa-angle-down"></i>
+                    </div>
+                </div>
+
+                <div class="form__group">
+                    <!-- <label for="cars" class="form__label">Choose a car:</label> -->
+                    <select id="passenger" name="passenger" class="form__select" [(ngModel)]="passengersvalue">
+                        <option value="adult" class="form__option">Adult</option>
+                        <option value="students" class="form__option">Students</option>
+                        <option value="youths" class="form__option">Youths</option>
+                        <option value="children" class="form__option">Children</option>
+                    </select>
+                    <div class="form__select-icon">
+                        <i class="fas fa-angle-down"></i>
+                    </div>                       
+                </div>
+
+                <div class="form__group">
+                    <!-- <label for="cars" class="form__label">Choose a car:</label> -->
+                    <select id="passenger" name="passenger" class="form__select" [(ngModel)]="classvalue">
+                        <option value="economy" class="form__option">Economy</option>
+                        <option value="premiumeconomy" class="form__option">Premium Economy</option>
+                        <option value="business" class="form__option">Business</option>
+                        <option value="first" class="form__option">First</option>
+                    </select>
+                    <div class="form__select-icon">
+                        <i class="fas fa-angle-down"></i>
+                    </div>                       
+                </div>
+                
+            </div>
+
+            <form action="" class="form" *ngIf="selectedTravel.value === 'return'">
+    
+                <div class="form__group">
+                    <input type="text" class="form__input" placeholder="From" id="from" required>
+                    <label for="from" class="form__label">From</label>
+                </div>
+        
+                <div class="form__group">
+                    <input type="text" class="form__input" placeholder="To" id="to" required>
+                    <label for="to" class="form__label">To</label>
+                </div>
+        
+                <div class="form__group">
+                    <input type="datetime-local" class="form__input" placeholder="Depart" id="depart" required>
+                    <label for="depart" class="form__label">Depart</label>
+                </div>
+
+                <div class="form__group">
+                    <input type="datetime-local" class="form__input" placeholder="Arrival" id="arrival" required>
+                    <label for="arrival" class="form__label">Arrival</label>
+                </div>
+
+                <div class="form__btn">
+                    <a routerLink="results/lagos-abuja">
+                        <button class="btn btn--green bold">
+                            <i class="fas fa-search"></i>
+                            Search
+                        </button>
+                    </a>
+                </div>
+        
+            </form>
+
+            <form action="" class="form" *ngIf="selectedTravel.value === 'oneway'">
+    
+                <div class="form__group">
+                    <input type="text" class="form__input" placeholder="From" id="from" required>
+                    <label for="from" class="form__label">From</label>
+                </div>
+        
+                <div class="form__group">
+                    <input type="text" class="form__input" placeholder="To" id="to" required>
+                    <label for="to" class="form__label">To</label>
+                </div>
+        
+                <div class="form__group">
+                    <input type="datetime-local" class="form__input" placeholder="Depart" id="depart" required>
+                    <label for="depart" class="form__label">Depart</label>
+                </div>
+
+                <div class="form__btn">
+                    <a routerLink="results/lagos-abuja">
+                        <button class="btn btn--green bold">
+                            <i class="fas fa-search"></i>
+                            Search
+                        </button>
+                    </a>
+                </div>
+
+            </form>
+
+            <form action="" class="form" *ngIf="selectedTravel.value === 'multicity'">
+                <div class="form__container">
+                    <div class="form__row">
+                        <div class="form__group">
+                            <input type="text" class="form__input" placeholder="From" id="from" required>
+                            <label for="from" class="form__label">From</label>
+                        </div>
+                
+                        <div class="form__group">
+                            <input type="text" class="form__input" placeholder="To" id="to" required>
+                            <label for="to" class="form__label">To</label>
+                        </div>
+                
+                        <div class="form__group">
+                            <input type="datetime-local" class="form__input" placeholder="Depart" id="depart" required>
+                            <label for="depart" class="form__label">Depart</label>
+                        </div>
+        
+                        <select id="passenger" name="passenger" class="form__select form__select--topc" [(ngModel)]="classvalue">
+                            <option value="economy" class="form__option">Economy</option>
+                            <option value="premiumeconomy" class="form__option">Premium Economy</option>
+                            <option value="business" class="form__option">Business</option>
+                            <option value="first" class="form__option">First</option>
+                        </select>
+                    </div>
+
+                    <div class="form__row">
+                        <div class="form__group">
+                            <input type="text" class="form__input" placeholder="From" id="from" required>
+                            <label for="from" class="form__label">From</label>
+                        </div>
+                
+                        <div class="form__group">
+                            <input type="text" class="form__input" placeholder="To" id="to" required>
+                            <label for="to" class="form__label">To</label>
+                        </div>
+                
+                        <div class="form__group">
+                            <input type="datetime-local" class="form__input" placeholder="Depart" id="depart" required>
+                            <label for="depart" class="form__label">Depart</label>
+                        </div>
+        
+                        <select id="passenger" name="passenger" class="form__select form__select form__select--topc" [(ngModel)]="classvalue">
+                            <option value="economy" class="form__option">Economy</option>
+                            <option value="premiumeconomy" class="form__option">Premium Economy</option>
+                            <option value="business" class="form__option">Business</option>
+                            <option value="first" class="form__option">First</option>
+                        </select>
+                    </div>
+
+                    <div class="form__row">
+                        <div class="form__group">
+                            <input type="text" class="form__input" placeholder="From" id="from" required>
+                            <label for="from" class="form__label">From</label>
+                        </div>
+                
+                        <div class="form__group">
+                            <input type="text" class="form__input" placeholder="To" id="to" required>
+                            <label for="to" class="form__label">To</label>
+                        </div>
+                
+                        <div class="form__group">
+                            <input type="datetime-local" class="form__input" placeholder="Depart" id="depart" required>
+                            <label for="depart" class="form__label">Depart</label>
+                        </div>
+        
+                        <select id="passenger" name="passenger" class="form__select form__select form__select--topc" [(ngModel)]="classvalue">
+                            <option value="economy" class="form__option">Economy</option>
+                            <option value="premiumeconomy" class="form__option">Premium Economy</option>
+                            <option value="business" class="form__option">Business</option>
+                            <option value="first" class="form__option">First</option>
+                        </select>
+                    </div>
+
+                </div>
+                
+
+                <div class="form__addflight">
+                    <a href="#" class="form__addflight--link">+ Add another flight</a>
+                </div>
+
+                <div class="form__clearall">
+                    <a href="#" class="form__clearall--link">clear</a>
+                </div>
+
+                <div class="form__btn">
+                    <a routerLink="results/lagos-abuja">
+                        <button class="btn btn--green bold">
+                            <i class="fas fa-search"></i>
+                            Search
+                        </button>
+                    </a>
+                </div>
+        
+            </form>
+        </div>
+
+    </div>
+
+
+
+    <div class="notice">
+        <h3>Please note that the data's displayed are not correct it was only used for testing</h3>
+    </div>
+
+
+
+
+
+    
+
+    <section class="result u-margin-top-big">
+        <div class="result__row">
+            <div class="result__filter">
+                <div class="result__group">
+                    <!-- <label for="cars" class="result__label">Choose a car:</label> -->
+                    <button class="dropdown" (click)="onDay1()" [class.active]="isDay1">
+                        <a class="dropbtn">
+                            Days
+                        </a>
+                        <ul class="dropdown-content">
+            
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt1" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+            
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt2" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+            
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt3" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt4" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+            
+                        </ul>
+                    </button>
+                    
+                    <div class="result__select-icon">
+                        <i class="fas fa-angle-down"></i>
+                    </div>
+                </div>
+
+                <div class="result__group">
+                    <!-- <label for="cars" class="result__label">Choose a car:</label> -->
+                    <button class="dropdown" (click)="onDay2()" [class.active]="isDay2">
+                        <a class="dropbtn">
+                            Days
+                        </a>
+                        <ul class="dropdown-content">
+            
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt1" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+            
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt2" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+            
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt3" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt4" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+            
+                        </ul>
+                    </button>
+                    
+                    <div class="result__select-icon">
+                        <i class="fas fa-angle-down"></i>
+                    </div>
+                </div>
+
+                <div class="result__group">
+                    <!-- <label for="cars" class="result__label">Choose a car:</label> -->
+                    <button class="dropdown" (click)="onDay3()" [class.active]="isDay3">
+                        <a class="dropbtn">
+                            Days
+                        </a>
+                        <ul class="dropdown-content">
+            
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt1" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+            
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt2" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+            
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt3" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt4" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+            
+                        </ul>
+                    </button>
+                    
+                    <div class="result__select-icon">
+                        <i class="fas fa-angle-down"></i>
+                    </div>
+                </div>
+
+                <div class="result__group">
+                    <!-- <label for="cars" class="result__label">Choose a car:</label> -->
+                    <button class="dropdown" (click)="onDay4()" [class.active]="isDay4">
+                        <a class="dropbtn">
+                            Days
+                        </a>
+                        <ul class="dropdown-content">
+            
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt1" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+            
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt2" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+            
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt3" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt4" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+            
+                        </ul>
+                    </button>
+                    
+                    <div class="result__select-icon">
+                        <i class="fas fa-angle-down"></i>
+                    </div>
+                </div>
+
+                <div class="result__group">
+                    <!-- <label for="cars" class="result__label">Choose a car:</label> -->
+                    <button class="dropdown" (click)="onDay5()" [class.active]="isDay5">
+                        <a class="dropbtn">
+                            Days
+                        </a>
+                        <ul class="dropdown-content">
+            
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt1" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+            
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt2" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+            
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt3" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt4" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+            
+                        </ul>
+                    </button>
+                    
+                    <div class="result__select-icon">
+                        <i class="fas fa-angle-down"></i>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="result__details">
+                <div class="result__group">
+                    <!-- <label for="cars" class="result__label">Choose a car:</label> -->
+                    <button class="dropdown" (click)="onDay6()" [class.active]="isDay6">
+                        <a class="dropbtn">
+                            Days
+                        </a>
+                        <ul class="dropdown-content">
+            
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt1" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+            
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt2" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+            
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt3" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <input class="result__filter--input" name="days" type="radio" id="opt1" checked>
+                                    <label for="opt4" class="result__filter--label">Days</label>
+                                </a>
+                            </li>
+            
+                        </ul>
+                    </button>
+                    
+                    <div class="result__select-icon">
+                        <i class="fas fa-angle-down"></i>
+                    </div>
+                </div>
+                <div class="result__check">
+                    <div class="result__detail">
+                    <div class="result__flight-departure">
+                        <div class="result__flight-departure--grid result__flight-departure--date"> 
+                            <div class="result__badge result__badge--fddt">FDDT</div> 
+                            22-7-2020
+                        </div>
+                        <div class="result__flight-departure--grid result__flight-departure--timeplaceTakeoff">
+                            <div class="result__badge result__badge--fdpot">FDPOT</div> 
+                            <span class="bold">17:30 Lagos</span> LOS
+                        </div>
+                        <div class="result__flight-departure--grid result__flight-departure--duration">
+                            <div class="result__badge result__badge--fdd">FDD</div> 
+                            1hr
+                        </div>
+                        <div class="result__flight-departure--grid result__flight-departure--timeplaceArrival">
+                            <div class="result__badge result__badge--fdpoa">FDPOA</div> 
+                            <span class="bold">18:30 Abuja</span> ABV
+                        </div>
+                        <div class="result__radio-group">
+                            <input type="checkbox" class="result__radio-input" id="1" name="size">
+                            <label for="1" class="result__radio-label">
+                                <span class="result__radio-button"></span>
+                                <div class="result__packages--icon">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="result__flight-return">
+                        <div class="result__flight-return--grid result__flight-return--date">
+                            <div class="result__badge result__badge--frdt">FRDT</div>
+                            23-7-2020
+                        </div>
+                        <div class="result__flight-return--grid result__flight-return--timeplaceTakeoff">
+                            <div class="result__badge result__badge--frpot">FRPOT</div>
+                            <span class="bold">19:30 Abuja</span> ABV
+                        </div>
+                        <div class="result__flight-return--grid result__flight-return--duration">
+                            <div class="result__badge result__badge--frd">FRD</div>
+                            1hr
+                        </div>
+                        <div class="result__flight-return--grid result__flight-return--timeplaceArrival">
+                            <div class="result__badge result__badge--frpoa">FRPOA</div>
+                            <span class="bold">20:30 Lagos</span> LOS
+                        </div>
+                        <div class="result__radio-group">
+                            <input type="checkbox" class="result__radio-input" id="2" name="size">
+                            <label for="2" class="result__radio-label">
+                                <span class="result__radio-button"></span>
+                                <div class="result__packages--icon">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="result__action">
+                        <button class="fas fa-heart btn-inline"></button>
+                        <div class="result__price">$100</div>
+                        <button class="btn btn--green booknow bold">Book</button>
+                    </div>
+
+                    <div class="result__packages">
+                        <div class="result__packages--class">Economy</div>
+                        <div class="result__packages--lugages">
+                            <div class="result__packages--icon">
+                                <i class="fas fa-luggage-cart"></i>
+                            </div>
+                            20kg
+                        </div>
+                        <div class="result__packages--bags">
+                            <div class="result__packages--icon">
+                                <i class="fas fa-shopping-bag"></i>
+                            </div>
+                            10kg
+                        </div>
+                    </div>
+                </div>
+                <div class="result__detail">
+                    <div class="result__flight-departure">
+                        <div class="result__flight-departure--grid result__flight-departure--date"> 
+                            <div class="result__badge result__badge--fddt">FDDT</div> 
+                            22-7-2020
+                        </div>
+                        <div class="result__flight-departure--grid result__flight-departure--timeplaceTakeoff">
+                            <div class="result__badge result__badge--fdpot">FDPOT</div> 
+                            <span class="bold">17:30 Lagos</span> LOS
+                        </div>
+                        <div class="result__flight-departure--grid result__flight-departure--duration">
+                            <div class="result__badge result__badge--fdd">FDD</div> 
+                            1hr
+                        </div>
+                        <div class="result__flight-departure--grid result__flight-departure--timeplaceArrival">
+                            <div class="result__badge result__badge--fdpoa">FDPOA</div> 
+                            <span class="bold">18:30 Abuja</span> ABV
+                        </div>
+                        <div class="result__radio-group">
+                            <input type="checkbox" class="result__radio-input" id="3" name="size">
+                            <label for="3" class="result__radio-label">
+                                <span class="result__radio-button"></span>
+                                <div class="result__packages--icon">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="result__flight-return">
+                        <div class="result__flight-return--grid result__flight-return--date">
+                            <div class="result__badge result__badge--frdt">FRDT</div>
+                            23-7-2020
+                        </div>
+                        <div class="result__flight-return--grid result__flight-return--timeplaceTakeoff">
+                            <div class="result__badge result__badge--frpot">FRPOT</div>
+                            <span class="bold">19:30 Abuja</span> ABV
+                        </div>
+                        <div class="result__flight-return--grid result__flight-return--duration">
+                            <div class="result__badge result__badge--frd">FRD</div>
+                            1hr
+                        </div>
+                        <div class="result__flight-return--grid result__flight-return--timeplaceArrival">
+                            <div class="result__badge result__badge--frpoa">FRPOA</div>
+                            <span class="bold">20:30 Lagos</span> LOS
+                        </div>
+                        <div class="result__radio-group">
+                            <input type="checkbox" class="result__radio-input" id="4" name="size">
+                            <label for="4" class="result__radio-label">
+                                <span class="result__radio-button"></span>
+                                <div class="result__packages--icon">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="result__action">
+                        <button class="fas fa-heart btn-inline"></button>
+                        <div class="result__price">$100</div>
+                        <button class="btn btn--green booknow bold">Book</button>
+                    </div>
+
+                    <div class="result__packages">
+                        <div class="result__packages--class">Economy</div>
+                        <div class="result__packages--lugages">
+                            <div class="result__packages--icon">
+                                <i class="fas fa-luggage-cart"></i>
+                            </div>
+                            20kg</div>
+                        <div class="result__packages--bags">
+                            <div class="result__packages--icon">
+                                <i class="fas fa-shopping-bag"></i>
+                            </div>
+                            10kg
+                        </div>
+                    </div>
+                </div>
+                <div class="result__detail">
+                    <div class="result__flight-departure">
+                        <div class="result__flight-departure--grid result__flight-departure--date"> 
+                            <div class="result__badge result__badge--fddt">FDDT</div> 
+                            22-7-2020
+                        </div>
+                        <div class="result__flight-departure--grid result__flight-departure--timeplaceTakeoff">
+                            <div class="result__badge result__badge--fdpot">FDPOT</div> 
+                            <span class="bold">17:30 Lagos</span> LOS
+                        </div>
+                        <div class="result__flight-departure--grid result__flight-departure--duration">
+                            <div class="result__badge result__badge--fdd">FDD</div> 
+                            1hr
+                        </div>
+                        <div class="result__flight-departure--grid result__flight-departure--timeplaceArrival">
+                            <div class="result__badge result__badge--fdpoa">FDPOA</div> 
+                            <span class="bold">18:30 Abuja</span> ABV
+                        </div>
+                        <div class="result__radio-group">
+                            <input type="checkbox" class="result__radio-input" id="3" name="size">
+                            <label for="3" class="result__radio-label">
+                                <span class="result__radio-button"></span>
+                                <div class="result__packages--icon">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="result__flight-return">
+                        <div class="result__flight-return--grid result__flight-return--date">
+                            <div class="result__badge result__badge--frdt">FRDT</div>
+                            23-7-2020
+                        </div>
+                        <div class="result__flight-return--grid result__flight-return--timeplaceTakeoff">
+                            <div class="result__badge result__badge--frpot">FRPOT</div>
+                            <span class="bold">19:30 Abuja</span> ABV
+                        </div>
+                        <div class="result__flight-return--grid result__flight-return--duration">
+                            <div class="result__badge result__badge--frd">FRD</div>
+                            1hr
+                        </div>
+                        <div class="result__flight-return--grid result__flight-return--timeplaceArrival">
+                            <div class="result__badge result__badge--frpoa">FRPOA</div>
+                            <span class="bold">20:30 Lagos</span> LOS
+                        </div>
+                        <div class="result__radio-group">
+                            <input type="checkbox" class="result__radio-input" id="4" name="size">
+                            <label for="4" class="result__radio-label">
+                                <span class="result__radio-button"></span>
+                                <div class="result__packages--icon">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="result__action">
+                        <button class="fas fa-heart btn-inline"></button>
+                        <div class="result__price">$100</div>
+                        <button class="btn btn--green booknow bold">Book</button>
+                    </div>
+
+                    <div class="result__packages">
+                        <div class="result__packages--class">Economy</div>
+                        <div class="result__packages--lugages">
+                            <div class="result__packages--icon">
+                                <i class="fas fa-luggage-cart"></i>
+                            </div>
+                            20kg</div>
+                        <div class="result__packages--bags">
+                            <div class="result__packages--icon">
+                                <i class="fas fa-shopping-bag"></i>
+                            </div>
+                            10kg
+                        </div>
+                    </div>
+                </div>
+                <div class="result__detail">
+                    <div class="result__flight-departure">
+                        <div class="result__flight-departure--grid result__flight-departure--date"> 
+                            <div class="result__badge result__badge--fddt">FDDT</div> 
+                            22-7-2020
+                        </div>
+                        <div class="result__flight-departure--grid result__flight-departure--timeplaceTakeoff">
+                            <div class="result__badge result__badge--fdpot">FDPOT</div> 
+                            <span class="bold">17:30 Lagos</span> LOS
+                        </div>
+                        <div class="result__flight-departure--grid result__flight-departure--duration">
+                            <div class="result__badge result__badge--fdd">FDD</div> 
+                            1hr
+                        </div>
+                        <div class="result__flight-departure--grid result__flight-departure--timeplaceArrival">
+                            <div class="result__badge result__badge--fdpoa">FDPOA</div> 
+                            <span class="bold">18:30 Abuja</span> ABV
+                        </div>
+                        <div class="result__radio-group">
+                            <input type="checkbox" class="result__radio-input" id="5" name="size">
+                            <label for="5" class="result__radio-label">
+                                <span class="result__radio-button"></span>
+                                <div class="result__packages--icon">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="result__flight-return">
+                        <div class="result__flight-return--grid result__flight-return--date">
+                            <div class="result__badge result__badge--frdt">FRDT</div>
+                            23-7-2020
+                        </div>
+                        <div class="result__flight-return--grid result__flight-return--timeplaceTakeoff">
+                            <div class="result__badge result__badge--frpot">FRPOT</div>
+                            <span class="bold">19:30 Abuja</span> ABV
+                        </div>
+                        <div class="result__flight-return--grid result__flight-return--duration">
+                            <div class="result__badge result__badge--frd">FRD</div>
+                            1hr
+                        </div>
+                        <div class="result__flight-return--grid result__flight-return--timeplaceArrival">
+                            <div class="result__badge result__badge--frpoa">FRPOA</div>
+                            <span class="bold">20:30 Lagos</span> LOS
+                        </div>
+                        <div class="result__radio-group">
+                            <input type="checkbox" class="result__radio-input" id="6" name="size">
+                            <label for="6" class="result__radio-label">
+                                <span class="result__radio-button"></span>
+                                <div class="result__packages--icon">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="result__action">
+                        <button class="fas fa-heart btn-inline"></button>
+                        <div class="result__price">$100</div>
+                        <button class="btn btn--green booknow bold">Book</button>
+                    </div>
+
+                    <div class="result__packages">
+                        <div class="result__packages--class">Economy</div>
+                        <div class="result__packages--lugages">
+                            <div class="result__packages--icon">
+                                <i class="fas fa-luggage-cart"></i>
+                            </div>
+                            20kg
+                        </div>
+                        <div class="result__packages--bags">
+                            <div class="result__packages--icon">
+                                <i class="fas fa-shopping-bag"></i>
+                            </div>
+                            10kg
+                        </div>
+                    </div>
+                </div>
+                </div>
+                
+            </div>
+
+            <div class="add">
+                <div class="meaning">
+                    <div class="badge--meaning">
+                        <div class="result__badge result__badge--fddt">FDDT</div>
+                            <span class="bold">--</span> Flight Departure Date
+                        </div>
+                        <div class="badge--meaning">
+                            <div class="result__badge result__badge--fdpot">FDPOT</div>
+                            <span class="bold">--</span> Flight Departure Place and Time to Takeoff
+                        </div>
+        
+                        <div class="badge--meaning">
+                            <div class="result__badge result__badge--fdd">FDD</div>
+                            <span class="bold">--</span> Flight Departure Duration
+                        </div>
+        
+                        <div class="badge--meaning">
+                            <div class="result__badge result__badge--fdpoa">FDPOA</div>
+                            <span class="bold">--</span> Flight Departure Place and Time of Arrival
+                        </div>
+        
+                        <div class="badge--meaning">
+                            <div class="result__badge result__badge--frdt">FRDT</div>
+                            <span class="bold">--</span> Flight Return Date
+                        </div>
+        
+                        <div class="badge--meaning">
+                            <div class="result__badge result__badge--frpot">FRPOT</div>
+                            <span class="bold">--</span> Flight Return Place and Time to Takeoff
+                        </div>
+        
+                        <div class="badge--meaning">
+                            <div class="result__badge result__badge--frd">FRD</div>
+                            <span class="bold">--</span> Flight Return Duration
+                        </div>
+        
+                        <div class="badge--meaning">
+                            <div class="result__badge result__badge--frpoa">FRPOA</div>
+                            <span class="bold">--</span> Flight Return Place and Time of Arrival
+                        </div>
+
+                </div>
+                    
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <section class="hotels">
+        <div class="hotels__head">
+            <h2 class="hotels__top">Top Hotels</h2>
+            <a href="#" class="hotels__see-all">see all</a>
+        </div>
+        <div class="top-hotels">
+            <div class="top-hotel">
+                <img src="../../assets/img/backgimg2.jpg" alt="House 1" class="top-hotel__img">
+                <div class="top-hotel__like fas fa-angle-down"></div>
+                <h5 class="top-hotel__name top-hotel__name--top">Beautiful Familiy House</h5>
+                <h5 class="top-hotel__name top-hotel__name--bottom">Beautiful Familiy House</h5>
+                <div class="top-hotel__location">
+                    <i class="fas fa-angle-down"></i>
+                    <p>USA</p>
+                </div>
+                <div class="top-hotel__rooms">
+                    <i class="fas fa-angle-down"></i>
+                    <p>5 rooms</p>
+                </div>
+                <div class="top-hotel__area">
+                    <i class="fas fa-angle-down"></i>
+                    <p>325 m<sup>2</sup></p>
+                </div>
+                <div class="top-hotel__price">
+                    <i class="fas fa-angle-down"></i>
+                    <p>$1,200,000</p>
+                </div>
+                <button class="btn btn--green top-hotel__btn u-margin-bottom-small">Contact realtor</button>
+            </div>
+    
+            <div class="top-hotel">
+                <img src="../../assets/img/backgimg2.jpg" alt="House 1" class="top-hotel__img">
+                <i class="top-hotel__like fas fa-angle-down"></i>
+                <h5 class="top-hotel__name top-hotel__name--top">Beautiful Familiy House</h5>
+                <h5 class="top-hotel__name top-hotel__name--bottom">Beautiful Familiy House</h5>
+                <div class="top-hotel__location">
+                    <i class="fas fa-angle-down"></i>
+                    <p>USA</p>
+                </div>
+                <div class="top-hotel__rooms">
+                    <i class="fas fa-angle-down"></i>
+                    <p>5 rooms</p>
+                </div>
+                <div class="top-hotel__area">
+                    <i class="fas fa-angle-down"></i>
+                    <p>325 m<sup>2</sup></p>
+                </div>
+                <div class="top-hotel__price">
+                    <i class="fas fa-angle-down"></i>
+                    <p>$1,200,000</p>
+                </div>
+                <button class="btn btn--green top-hotel__btn u-margin-bottom-small">Contact realtor</button>
+            </div>
+            <div class="top-hotel">
+                <img src="../../assets/img/backgimg2.jpg" alt="House 1" class="top-hotel__img">
+                <i class="top-hotel__like fas fa-angle-down"></i>
+                <h5 class="top-hotel__name top-hotel__name--top">Beautiful Familiy House</h5>
+                <h5 class="top-hotel__name top-hotel__name--bottom">Beautiful Familiy House</h5>
+                <div class="top-hotel__location">
+                    <i class="fas fa-angle-down"></i>
+                    <p>USA</p>
+                </div>
+                <div class="top-hotel__rooms">
+                    <i class="fas fa-angle-down"></i>
+                    <p>5 rooms</p>
+                </div>
+                <div class="top-hotel__area">
+                    <i class="fas fa-angle-down"></i>
+                    <p>325 m<sup>2</sup></p>
+                </div>
+                <div class="top-hotel__price">
+                    <i class="fas fa-angle-down"></i>
+                    <p>$1,200,000</p>
+                </div>
+                <button class="btn btn--green top-hotel__btn u-margin-bottom-small">Contact realtor</button>
+            </div>
+            <div class="top-hotel">
+                <img src="../../assets/img/backgimg2.jpg" alt="House 1" class="top-hotel__img">
+                <i class="top-hotel__like fas fa-angle-down"></i>
+                <h5 class="top-hotel__name top-hotel__name--top">Beautiful Familiy House</h5>
+                <h5 class="top-hotel__name top-hotel__name--bottom">Beautiful Familiy House</h5>
+                <div class="top-hotel__location">
+                    <i class="fas fa-angle-down"></i>
+                    <p>USA</p>
+                </div>
+                <div class="top-hotel__rooms">
+                    <i class="fas fa-angle-down"></i>
+                    <p>5 rooms</p>
+                </div>
+                <div class="top-hotel__area">
+                    <i class="fas fa-angle-down"></i>
+                    <p>325 m<sup>2</sup></p>
+                </div>
+                <div class="top-hotel__price">
+                    <i class="fas fa-angle-down"></i>
+                    <p>$1,200,000</p>
+                </div>
+                <button class="btn btn--green top-hotel__btn u-margin-bottom-small">Contact realtor</button>
+            </div>
+    
+            <div class="top-hotel">
+                <img src="../../assets/img/backgimg2.jpg" alt="House 1" class="top-hotel__img">
+                <i class="top-hotel__like fas fa-angle-down"></i>
+                <h5 class="top-hotel__name top-hotel__name--top">Beautiful Familiy House</h5>
+                <h5 class="top-hotel__name top-hotel__name--bottom">Beautiful Familiy House</h5>
+                <div class="top-hotel__location">
+                    <i class="fas fa-angle-down"></i>
+                    <p>USA</p>
+                </div>
+                <div class="top-hotel__rooms">
+                    <i class="fas fa-angle-down"></i>
+                    <p>5 rooms</p>
+                </div>
+                <div class="top-hotel__area">
+                    <i class="fas fa-angle-down"></i>
+                    <p>325 m<sup>2</sup></p>
+                </div>
+                <div class="top-hotel__price">
+                    <i class="fas fa-angle-down"></i>
+                    <p>$1,200,000</p>
+                </div>
+                <button class="btn btn--green top-hotel__btn u-margin-bottom-small">Contact realtor</button>
+            </div>
+    
+            <div class="top-hotel">
+                <img src="../../assets/img/backgimg2.jpg" alt="House 1" class="top-hotel__img">
+                <i class="top-hotel__like fas fa-angle-down"></i>
+                <h5 class="top-hotel__name top-hotel__name--top">Beautiful Familiy House</h5>
+                <h5 class="top-hotel__name top-hotel__name--bottom">Beautiful Familiy House</h5>
+                <div class="top-hotel__location">
+                    <i class="fas fa-angle-down"></i>
+                    <p>USA</p>
+                </div>
+                <div class="top-hotel__rooms">
+                    <i class="fas fa-angle-down"></i>
+                    <p>5 rooms</p>
+                </div>
+                <div class="top-hotel__area">
+                    <i class="fas fa-angle-down"></i>
+                    <p>325 m<sup>2</sup></p>
+                </div>
+                <div class="top-hotel__price">
+                    <i class="fas fa-angle-down"></i>
+                    <p>$1,200,000</p>
+                </div>
+                <button class="btn btn--green top-hotel__btn u-margin-bottom-small">Contact realtor</button>
+            </div>
+    
+            <div class="top-hotel">
+                <img src="../../assets/img/backgimg2.jpg" alt="House 1" class="top-hotel__img">
+                <i class="top-hotel__like fas fa-angle-down"></i>
+                <h5 class="top-hotel__name top-hotel__name--top">Beautiful Familiy House</h5>
+                <h5 class="top-hotel__name top-hotel__name--bottom">Beautiful Familiy House</h5>
+                <div class="top-hotel__location">
+                    <i class="fas fa-angle-down"></i>
+                    <p>USA</p>
+                </div>
+                <div class="top-hotel__rooms">
+                    <i class="fas fa-angle-down"></i>
+                    <p>5 rooms</p>
+                </div>
+                <div class="top-hotel__area">
+                    <i class="fas fa-angle-down"></i>
+                    <p>325 m<sup>2</sup></p>
+                </div>
+                <div class="top-hotel__price">
+                    <i class="fas fa-angle-down"></i>
+                    <p>$1,200,000</p>
+                </div>
+                <button class="btn btn--green top-hotel__btn u-margin-bottom-small">Contact realtor</button>
+            </div>
+    
+            <div class="top-hotel">
+                <img src="../../assets/img/backgimg2.jpg" alt="House 1" class="top-hotel__img">
+                <i class="top-hotel__like fas fa-angle-down"></i>
+                <h5 class="top-hotel__name top-hotel__name--top">Beautiful Familiy House</h5>
+                <h5 class="top-hotel__name top-hotel__name--bottom">Beautiful Familiy House</h5>
+                <div class="top-hotel__location">
+                    <i class="fas fa-angle-down"></i>
+                    <p>USA</p>
+                </div>
+                <div class="top-hotel__rooms">
+                    <i class="fas fa-angle-down"></i>
+                    <p>5 rooms</p>
+                </div>
+                <div class="top-hotel__area">
+                    <i class="fas fa-angle-down"></i>
+                    <p>325 m<sup>2</sup></p>
+                </div>
+                <div class="top-hotel__price">
+                    <i class="fas fa-angle-down"></i>
+                    <p>$1,200,000</p>
+                </div>
+                <button class="btn btn--green top-hotel__btn u-margin-bottom-small">Contact realtor</button>
+            </div>
+        </div>
+        
+    </section>
+
+    <section class="stories u-margin-top-big">
+        <div class="stories__head">
+            <h2 class="stories__top">Top Stories</h2>
+            <a href="#" class="stories__see-all">see all</a>    
+        </div>
+        
+        <div class="top-stories">
+            <div class="top-story">
+                <img src="../../assets/img/backgimg3.jpg" alt="top-story" class="top-story__img">
+                <h2 class="top-story__name">Top Story</h2>
+            </div>
+        
+            <div class="top-story">
+                <img src="../../assets/img/backgimg3.jpg" alt="top-story" class="top-story__img">
+                <h2 class="top-story__name">Top Story</h2>
+            </div>
+        
+        
+            <div class="top-story">
+                <img src="../../assets/img/backgimg3.jpg" alt="top-story" class="top-story__img">
+                <h2 class="top-story__name">Top Story</h2>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <section class="destinations u-margin-top-big">
+        <div class="destinations__head">
+            <h2 class="destinations__top">Top Destination</h2>
+            <a href="#" class="destinations__see-all">see all</a>    
+        </div>
+            
+        <div class="top-destinations">
+            <div class="top-destination">
+                <img src="../../assets/img/backgimg3.jpg" alt="top-destination" class="top-destination__img">
+                <h2 class="top-destination__name">Top Destination</h2>
+                <p class="top-destination__desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus deleniti, quasi quis minus adipisci quas blanditiis consectetur porro.
+                </p>
+            </div>
+        
+        
+            <div class="top-destination">
+                <img src="../../assets/img/backgimg3.jpg" alt="top-destination" class="top-destination__img">
+                <h2 class="top-destination__name">Top Destination</h2>
+                <p class="top-destination__desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus deleniti, quasi quis minus adipisci quas blanditiis consectetur porro.
+                </p>
+            </div>
+    
+    
+            <div class="top-destination">
+                <img src="../../assets/img/backgimg3.jpg" alt="top-destination" class="top-destination__img">
+                <h2 class="top-destination__name">Top Destination</h2>
+                <p class="top-destination__desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus deleniti, quasi quis minus adipisci quas blanditiis consectetur porro.
+                </p>
+            </div>
+        </div>
+                
+    </section> -->
+
+        
+</div>
+
+

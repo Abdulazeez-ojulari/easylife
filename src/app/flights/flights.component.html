@@ -1,0 +1,437 @@
+<!-- <google-map></google-map> -->
+<div class="container">
+    <div class="booking">
+
+        <div class="book-form">
+
+            <div class="form__filter">
+                <div class="form__group">
+                    <!-- <label for="cars" class="form__label">Choose a car:</label> -->
+                    <select id="travel" name="travel" class="form__select" [(ngModel)]="travelvalue" [formControl]="selectedTravel">
+                        <option value="return" class="form__option" >Return</option>
+                        <option value="oneway" class="form__option">One-Way</option>
+                        <option value="multicity" class="form__option">Multi-City</option>
+                    </select>
+                    <div class="form__select-icon">
+                        <i class="fas fa-angle-down"></i>
+                    </div>
+                </div>
+
+                <div class="form__group">
+                    <!-- <label for="cars" class="form__label">Choose a car:</label> -->
+                    <select id="passenger" name="passenger" class="form__select" [(ngModel)]="passengersvalue">
+                        <option value="adult" class="form__option">Adult</option>
+                        <option value="students" class="form__option">Students</option>
+                        <option value="youths" class="form__option">Youths</option>
+                        <option value="children" class="form__option">Children</option>
+                    </select>
+                    <div class="form__select-icon">
+                        <i class="fas fa-angle-down"></i>
+                    </div>                       
+                </div>
+
+                <div class="form__group">
+                    <!-- <label for="cars" class="form__label">Choose a car:</label> -->
+                    <select id="passenger" name="passenger" class="form__select" [(ngModel)]="classvalue">
+                        <option value="economy" class="form__option">Economy</option>
+                        <option value="premiumeconomy" class="form__option">Premium Economy</option>
+                        <option value="business" class="form__option">Business</option>
+                        <option value="first" class="form__option">First</option>
+                    </select>
+                    <div class="form__select-icon">
+                        <i class="fas fa-angle-down"></i>
+                    </div>                       
+                </div>
+                
+            </div>
+
+            <form action="" class="form" *ngIf="selectedTravel.value === 'return'">
+    
+                <div class="form__group">
+                    <input type="text" class="form__input" placeholder="From" id="from" required>
+                    <label for="from" class="form__label">From</label>
+                </div>
+        
+                <div class="form__group">
+                    <input type="text" class="form__input" placeholder="To" id="to" required>
+                    <label for="to" class="form__label">To</label>
+                </div>
+        
+                <div class="form__group">
+                    <input type="datetime-local" class="form__input" placeholder="Depart" id="depart" required>
+                    <label for="depart" class="form__label">Depart</label>
+                </div>
+
+                <div class="form__group">
+                    <input type="datetime-local" class="form__input" placeholder="Arrival" id="arrival" required>
+                    <label for="arrival" class="form__label">Arrival</label>
+                </div>
+
+                <div class="form__btn">
+                    <a routerLink="results/lagos-abuja">
+                        <button class="btn btn--green bold">
+                            <i class="fas fa-search"></i>
+                            Search
+                        </button>
+                    </a>
+                </div>
+        
+            </form>
+
+            <form action="" class="form" *ngIf="selectedTravel.value === 'oneway'">
+    
+                <div class="form__group">
+                    <input type="text" class="form__input" placeholder="From" id="from" required>
+                    <label for="from" class="form__label">From</label>
+                </div>
+        
+                <div class="form__group">
+                    <input type="text" class="form__input" placeholder="To" id="to" required>
+                    <label for="to" class="form__label">To</label>
+                </div>
+        
+                <div class="form__group">
+                    <input type="datetime-local" class="form__input" placeholder="Depart" id="depart" required>
+                    <label for="depart" class="form__label">Depart</label>
+                </div>
+
+                <div class="form__btn">
+                    <a routerLink="results/lagos-abuja">
+                        <button class="btn btn--green bold">
+                            <i class="fas fa-search"></i>
+                            Search
+                        </button>
+                    </a>
+                </div>
+
+            </form>
+
+            <form action="" class="form" *ngIf="selectedTravel.value === 'multicity'">
+                <div class="form__container">
+                    <div class="form__row">
+                        <div class="form__group">
+                            <input type="text" class="form__input" placeholder="From" id="from" required>
+                            <label for="from" class="form__label">From</label>
+                        </div>
+                
+                        <div class="form__group">
+                            <input type="text" class="form__input" placeholder="To" id="to" required>
+                            <label for="to" class="form__label">To</label>
+                        </div>
+                
+                        <div class="form__group">
+                            <input type="datetime-local" class="form__input" placeholder="Depart" id="depart" required>
+                            <label for="depart" class="form__label">Depart</label>
+                        </div>
+        
+                        <select id="passenger" name="passenger" class="form__select form__select--topc" [(ngModel)]="classvalue">
+                            <option value="economy" class="form__option">Economy</option>
+                            <option value="premiumeconomy" class="form__option">Premium Economy</option>
+                            <option value="business" class="form__option">Business</option>
+                            <option value="first" class="form__option">First</option>
+                        </select>
+                    </div>
+
+                    <div class="form__row">
+                        <div class="form__group">
+                            <input type="text" class="form__input" placeholder="From" id="from" required>
+                            <label for="from" class="form__label">From</label>
+                        </div>
+                
+                        <div class="form__group">
+                            <input type="text" class="form__input" placeholder="To" id="to" required>
+                            <label for="to" class="form__label">To</label>
+                        </div>
+                
+                        <div class="form__group">
+                            <input type="datetime-local" class="form__input" placeholder="Depart" id="depart" required>
+                            <label for="depart" class="form__label">Depart</label>
+                        </div>
+        
+                        <select id="passenger" name="passenger" class="form__select form__select form__select--topc" [(ngModel)]="classvalue">
+                            <option value="economy" class="form__option">Economy</option>
+                            <option value="premiumeconomy" class="form__option">Premium Economy</option>
+                            <option value="business" class="form__option">Business</option>
+                            <option value="first" class="form__option">First</option>
+                        </select>
+                    </div>
+
+                    <div class="form__row">
+                        <div class="form__group">
+                            <input type="text" class="form__input" placeholder="From" id="from" required>
+                            <label for="from" class="form__label">From</label>
+                        </div>
+                
+                        <div class="form__group">
+                            <input type="text" class="form__input" placeholder="To" id="to" required>
+                            <label for="to" class="form__label">To</label>
+                        </div>
+                
+                        <div class="form__group">
+                            <input type="datetime-local" class="form__input" placeholder="Depart" id="depart" required>
+                            <label for="depart" class="form__label">Depart</label>
+                        </div>
+        
+                        <select id="passenger" name="passenger" class="form__select form__select form__select--topc" [(ngModel)]="classvalue">
+                            <option value="economy" class="form__option">Economy</option>
+                            <option value="premiumeconomy" class="form__option">Premium Economy</option>
+                            <option value="business" class="form__option">Business</option>
+                            <option value="first" class="form__option">First</option>
+                        </select>
+                    </div>
+
+                </div>
+                
+
+                <div class="form__addflight">
+                    <a href="#" class="form__addflight--link">+ Add another flight</a>
+                </div>
+
+                <div class="form__clearall">
+                    <a href="#" class="form__clearall--link">clear</a>
+                </div>
+
+                <div class="form__btn">
+                    <a routerLink="results/lagos-abuja">
+                        <button class="btn btn--green bold">
+                            <i class="fas fa-search"></i>
+                            Search
+                        </button>
+                    </a>
+                </div>
+        
+            </form>
+        </div>
+
+
+
+    </div>
+
+    <section class="stories u-margin-top-big">
+        <div class="stories__head">
+            <h2 class="stories__top">Top Stories</h2>
+            <a href="#" class="stories__see-all">see all</a>    
+        </div>
+        
+        <div class="top-stories">
+            <div class="top-story">
+                <img src="../../assets/img/backgimg3.jpg" alt="top-story" class="top-story__img">
+                <h2 class="top-story__name">Top Story</h2>
+            </div>
+        
+            <div class="top-story">
+                <img src="../../assets/img/backgimg3.jpg" alt="top-story" class="top-story__img">
+                <h2 class="top-story__name">Top Story</h2>
+            </div>
+        
+        
+            <div class="top-story">
+                <img src="../../assets/img/backgimg3.jpg" alt="top-story" class="top-story__img">
+                <h2 class="top-story__name">Top Story</h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <div class="gallery__item gallery__item--head">
+            <h2 class="destinations__top">Top Destination</h2>
+            <a href="#" class="destinations__see-all">see all</a>    
+        </div>
+        <figure class="gallery__item gallery__item--1">
+            <div class="gallery__item--travel-package">
+                <p class="category">Nature</p>
+                <h3 class="state">Moscow</h3>
+                <p class="daysprice">3 nights from $1009</p>
+            </div>
+
+            <div class="details">
+                <p>Lagos</p>
+            </div>
+            <img src="../../assets/img/bangladesh.jpg" alt="top-story" class="gallery__img">
+        </figure>
+        <figure class="gallery__item gallery__item--2">
+
+            <div class="gallery__item--travel-package">
+                <p class="category">Nature</p>
+                <h3 class="state">Moscow</h3>
+                <p class="daysprice">3 nights from $1009</p>
+            </div>
+
+            <div class="details">
+                <p>Lagos</p>
+            </div>
+            <img src="../../assets/img/cairo.jpg" alt="top-story" class="gallery__img">
+        </figure>
+        <figure class="gallery__item gallery__item--3">
+
+            <div class="gallery__item--travel-package">
+                <p class="category">Nature</p>
+                <h3 class="state">Moscow</h3>
+                <p class="daysprice">3 nights from $1009</p>
+            </div>
+
+            <div class="details">
+                <p>Lagos</p>
+            </div>
+            <img src="../../assets/img/denver.jpg" alt="top-story" class="gallery__img">
+        </figure>
+        <figure class="gallery__item gallery__item--4">
+
+            <div class="gallery__item--travel-package">
+                <p class="category">Nature</p>
+                <h3 class="state">Moscow</h3>
+                <p class="daysprice">3 nights from $1009</p>
+            </div>
+
+            <div class="details">
+                <p>Lagos</p>
+            </div>
+            <img src="../../assets/img/france.jpg" alt="top-story" class="gallery__img">
+        </figure>
+        <figure class="gallery__item gallery__item--5">
+
+            <div class="gallery__item--travel-package">
+                <p class="category">Nature</p>
+                <h3 class="state">Moscow</h3>
+                <p class="daysprice">3 nights from $1009</p>
+            </div>
+
+            <div class="details">
+                <p>Lagos</p>
+            </div>
+            <img src="../../assets/img/italy.jpg" alt="top-story" class="gallery__img">
+        </figure>
+        <figure class="gallery__item gallery__item--6">
+
+            <div class="gallery__item--travel-package">
+                <p class="category">Nature</p>
+                <h3 class="state">Moscow</h3>
+                <p class="daysprice">3 nights from $1009</p>
+            </div>
+
+            <div class="details">
+                <p>Lagos</p>
+            </div>
+            <img src="../../assets/img/klokata.jpg" alt="top-story" class="gallery__img">
+        </figure>
+        <figure class="gallery__item gallery__item--7">
+
+            <div class="gallery__item--travel-package">
+                <p class="category">Nature</p>
+                <h3 class="state">Moscow</h3>
+                <p class="daysprice">3 nights from $1009</p>
+            </div>
+
+            <div class="details">
+                <p>Lagos</p>
+            </div>
+            <img src="../../assets/img/meijishrineyokota.jpg" alt="top-story" class="gallery__img">
+        </figure>
+        <figure class="gallery__item gallery__item--8">
+
+            <div class="gallery__item--travel-package">
+                <p class="category">Nature</p>
+                <h3 class="state">Moscow</h3>
+                <p class="daysprice">3 nights from $1009</p>
+            </div>
+
+            <div class="details">
+                <p>Lagos</p>
+            </div>
+            <img src="../../assets/img/qater.jpg" alt="top-story" class="gallery__img">
+        </figure>
+        <figure class="gallery__item gallery__item--9">
+
+            <div class="gallery__item--travel-package">
+                <p class="category">Nature</p>
+                <h3 class="state">Moscow</h3>
+                <p class="daysprice">3 nights from $1009</p>
+            </div>
+
+            <div class="details">
+                <p>Lagos</p>
+            </div>
+            <img src="../../assets/img/spain.jpg" alt="top-story" class="gallery__img">
+        </figure>
+        <figure class="gallery__item gallery__item--10">
+
+            <div class="gallery__item--travel-package">
+                <p class="category">Nature</p>
+                <h3 class="state">Moscow</h3>
+                <p class="daysprice">3 nights from $1009</p>
+            </div>
+
+            <div class="details">
+                <p>Lagos</p>
+            </div>
+            <img src="../../assets/img/tallinn.jpg" alt="top-story" class="gallery__img">
+        </figure>
+        <figure class="gallery__item gallery__item--11">
+
+            <div class="gallery__item--travel-package">
+                <p class="category">Nature</p>
+                <h3 class="state">Moscow</h3>
+                <p class="daysprice">3 nights from $1009</p>
+            </div>
+
+            <div class="details">
+                <p>Lagos</p>
+            </div>
+            <img src="../../assets/img/venice.jpg" alt="top-story" class="gallery__img">
+        </figure>
+        <figure class="gallery__item gallery__item--12">
+
+            <div class="gallery__item--travel-package">
+                <p class="category">Nature</p>
+                <h3 class="state">Moscow</h3>
+                <p class="daysprice">3 nights from $1009</p>
+            </div>
+
+            <div class="details">
+                <p>Lagos</p>
+            </div>
+            <img src="../../assets/img/costarica.jpg" alt="top-story" class="gallery__img">
+        </figure>
+
+    </section>
+
+    <section class="destinations u-margin-top-big">
+        <div class="destinations__head">
+            <h2 class="destinations__top">Top Destinations</h2>
+            <a href="#" class="destinations__see-all">see all</a>    
+        </div>
+            
+        <div class="top-destinations">
+            <div class="top-destination">
+                <img src="../../assets/img/backgimg3.jpg" alt="top-destination" class="top-destination__img">
+                <h2 class="top-destination__name">Top Destination</h2>
+                <p class="top-destination__desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus deleniti, quasi quis minus adipisci quas blanditiis consectetur porro.
+                </p>
+            </div>
+        
+        
+            <div class="top-destination">
+                <img src="../../assets/img/backgimg3.jpg" alt="top-destination" class="top-destination__img">
+                <h2 class="top-destination__name">Top Destination</h2>
+                <p class="top-destination__desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus deleniti, quasi quis minus adipisci quas blanditiis consectetur porro.
+                </p>
+            </div>
+    
+    
+            <div class="top-destination">
+                <img src="../../assets/img/backgimg3.jpg" alt="top-destination" class="top-destination__img">
+                <h2 class="top-destination__name">Top Destination</h2>
+                <p class="top-destination__desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus deleniti, quasi quis minus adipisci quas blanditiis consectetur porro.
+                </p>
+            </div>
+        </div>
+                
+    </section>
+
+        
+</div>
+
+
